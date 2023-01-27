@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IoT System</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <a href="#information" id="name">
+            <h2>Smart Agricultural System</h2>
+        </a>
+        <div id="link-container">
+            <a href="#information" class="nav-link"><img class="nav-icon" src="/img/home.png" title="Home"></a>
+            <a href="#contact" class="nav-link"><img class="nav-icon" src="/img/contact.png" title="Contact"></a>
+        </div>
+    </header>
+    <!--main body-->
+    <div class="information-screen" id="information">
+        <!--light intensity block-->
+        <div class="block" id="light-block">
+            <div class="information-block">
+                <img class="information-img" src="/img/light.png" />
+                <div class="info">
+                    <p class="information-number" id="lnum">00</p>
+                    <p id="lunit">lux</p>
+                </div>
+            </div>
+            <div class="control-block">
+                <img class="on-off-img" id="img1" src="/img/light_off.png" />
+                <div class="btn-block">
+                    <button class="off-btn" id="offbtn1" type="button">OFF</button>
+                    <button class="on-btn" id="onbtn1" type="button">ON</button>
+                </div>
+            </div>
+            <div class="target-block">
+                <p>&nbspOn if &lt&nbsp</p>
+                <p class="target-number">1000</p>
+                <p>&nbsplux&nbsp</p>
+                <div id="up-down-block">
+                    <button class="up-down-btn"><img class="up-down-btn-icon" id="up-btn1" src="/img/up.png"></button>
+                    <button class="up-down-btn"><img class="up-down-btn-icon" id="down-btn1"
+                            src="/img/down.png"></button>
+                </div>
+            </div>
+        </div>
+        <!--temperature block-->
+        <div class="block" id="temperature-block">
+            <div class="information-block">
+                <img class="information-img" src="/img/temperature.png" />
+                <div class="info">
+                    <p class="information-number" id="tnum">00</p>
+                    <p id="tunit">°C</p>
+                </div>
+            </div>
+
+            <div class="control-block">
+                <img class="on-off-img" id="img2" src="/img/fan_off.png" />
+                <div class="btn-block">
+                    <button class="off-btn" id="offbtn2" type="button">OFF</button>
+                    <button class="on-btn" id="onbtn2" type="button">ON</button>
+                </div>
+            </div>
+
+            <div class="target-block">
+                <p>&nbspOn if &gt&nbsp</p>
+                <p class="target-number">30</p>
+                <p>&nbsp°C&nbsp</p>
+                <div id="up-down-block">
+                    <button class="up-down-btn"><img class="up-down-btn-icon" id="up-btn2" src="/img/up.png"></button>
+                    <button class="up-down-btn"><img class="up-down-btn-icon" id="down-btn2"
+                            src="/img/down.png"></button>
+                </div>
+            </div>
+        </div>
+        <!--humidity block-->
+        <div class="block" id="humidity-block">
+            <div class="information-block">
+                <img class="information-img" src="/img/humidity.png" />
+                <div class="info">
+                    <p class="information-number" id="hnum">00</p>
+                    <p id="hunit">%</p>
+                </div>
+            </div>
+
+            <div class="control-block">
+                <img class="on-off-img" id="img3" src="/img/water_off.png" />
+                <div class="btn-block">
+                    <button class="off-btn" id="offbtn3" type="button">OFF</button>
+                    <button class="on-btn" id="onbtn3" type="button">ON</button>
+                </div>
+            </div>
+
+            <div class="target-block">
+                <p>&nbspOn if &lt&nbsp</p>
+                <p class="target-number">50</p>
+                <p>&nbsp%&nbsp</p>
+                <div id="up-down-block">
+                    <button class="up-down-btn"><img class="up-down-btn-icon" id="up-btn3" src="/img/up.png"></button>
+                    <button class="up-down-btn"><img class="up-down-btn-icon" id="down-btn3"
+                            src="/img/down.png"></button>
+                </div>
+            </div>
+        </div>
+        <div id="mode">
+            <p id="auto-word">AUTO MODE&nbsp</p>
+            <button id="auto-mode-btn">OFF</button>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p id="author"><br>AUTHORS<br></p>
+            <p><br>XXXXXXXXXX</p>
+        <p><br>Email: <i>author@gmail.com</i></p>
+        <p><br>Ho Chi Minh City University Of Technology And Education, 2022</p>
+    </footer>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD8jtlJsPZtxVYblBnHUtvEOvu2EBg8gN0",
+            authDomain: "test-e407e.firebaseapp.com",
+            databaseURL: "https://test-e407e-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "test-e407e",
+            storageBucket: "test-e407e.appspot.com",
+            messagingSenderId: "1007443185294",
+            appId: "1:1007443185294:web:4a151dfb5ff9c4311483df",
+            measurementId: "G-1MN08Q319C"
+        };
+        firebase.initializeApp(firebaseConfig); 
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
